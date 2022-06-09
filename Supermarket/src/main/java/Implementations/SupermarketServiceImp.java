@@ -202,20 +202,7 @@ public class SupermarketServiceImp implements SupermarketService {
                         break;
                     }
                 }
-//                cash.stream().forEach(c ->{
-//                    if((double)Math.round((change[0] - c.getValue())*10)/10 >= 0 && valid[1]){
-//                        pay[0] += c.getValue();
-//                        valid[0] = true;
-//                        change[0] -= c.getValue();
-//                        int q = customerMoney.get(c.getValue());
-//                        if(q+1 > c.getQuantity()){
-//                            valid[1] = false;
-//                        }
-//
-//                        customerMoney.put(c.getValue(), ++q);
-//                    }
 
-//                });
                 if(!valid[0] && !valid[1])
                     throw new NotEnoughChangeException();
             } catch (NotEnoughChangeException e){
